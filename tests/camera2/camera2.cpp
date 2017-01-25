@@ -433,7 +433,7 @@ TEST_F(Camera2Test, Capture1Raw) {
         add_camera_metadata_entry(request,
                 ANDROID_SENSOR_EXPOSURE_TIME,
                 (void**)&exposureTime, 1);
-        uint64_t frameDuration = 30*MSEC;
+        uint64_t frameDuration = 16*MSEC;     //JAD Was 30
         add_camera_metadata_entry(request,
                 ANDROID_SENSOR_FRAME_DURATION,
                 (void**)&frameDuration, 1);
@@ -565,7 +565,7 @@ TEST_F(Camera2Test, CaptureBurstRaw) {
                 ANDROID_REQUEST_OUTPUT_STREAMS,
                 (void**)&outputStreams, 1);
 
-        uint64_t frameDuration = 30*MSEC;
+        uint64_t frameDuration = 16*MSEC;       //JAD was 30
         add_camera_metadata_entry(request,
                 ANDROID_SENSOR_FRAME_DURATION,
                 (void**)&frameDuration, 1);
@@ -740,7 +740,7 @@ TEST_F(Camera2Test, Capture1Jpeg) {
         add_camera_metadata_entry(request,
                 ANDROID_SENSOR_EXPOSURE_TIME,
                 (void**)&exposureTime, 1);
-        uint64_t frameDuration = 30*MSEC;
+        uint64_t frameDuration = 16*MSEC;      //JAD was 30
         add_camera_metadata_entry(request,
                 ANDROID_SENSOR_FRAME_DURATION,
                 (void**)&frameDuration, 1);
